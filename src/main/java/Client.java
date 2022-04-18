@@ -1,11 +1,12 @@
+package main.java;
+
 import java.io.*;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 public class Client {
     public static void main(String[] args) {
         String host = "netology.homework";
-        int port = 8088;
+        int port = 8091;
 
         try {
             Socket client = new Socket(host, port);
@@ -24,8 +25,6 @@ public class Client {
             inMessages(in);
             inMessages(in);
 
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
